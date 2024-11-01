@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS MPK SMKN Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="download-removebg-preview.png" type="image/x-icon" class="rounded-full bg-none p-1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-lg z-50 transition-transform duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <!-- image osismpk652 osis -->
+                    <div class="flex mr-2">
+                        <img src="IMG_7368 (2).PNG" alt="Logo" class="h-16">
+                        <img src="download.png" alt="Logo" class="h-16">
+                    </div>
+                    <span
+                        class="ml-3 text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
+                        OSIS MPK SMKN 65
+                    </span>
+                </div>
+
+                <!-- Burger Menu Button -->
+                <button id="burger-btn" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="burger-icon" class="block" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-home mr-2"></i>Beranda
+                    </a>
+                    <a href="#sejarah" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-history mr-2"></i>Sejarah
+                    </a>
+                    <a href="#visimisi" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-bullseye mr-2"></i>Visi & Misi
+                    </a>
+                    <a href="#kegiatan" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-calendar-alt mr-2"></i>Kegiatan
+                    </a>
+                    <a href="#galeri" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-images mr-2"></i>Galeri
+                    </a>
+                    <a href="#kontak" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Kontak
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col space-y-4 mt-4 border-t pt-4">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-home mr-2"></i>Beranda
+                    </a>
+                    <a href="#sejarah" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-history mr-2"></i>Sejarah
+                    </a>
+                    <a href="#visimisi" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-bullseye mr-2"></i>Visi & Misi
+                    </a>
+                    <a href="#kegiatan" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-calendar-alt mr-2"></i>Kegiatan
+                    </a>
+                    <a href="#galeri" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-images mr-2"></i>Galeri
+                    </a>
+                    <a href="#kontak" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Kontak
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section-height relative flex items-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('2024.jpeg');"></div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10 mb-10">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Welcome to<br>
+                    <span class="text-blue-300">OSIS MPK 65</span>
+                </h1>
+                <p class="text-2xl text-white mb-12">
+                    Membangun Generasi Unggul, Kreatif, dan Berprestasi
+                </p>
+                <button
+                    class="bg-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <i class="fas fa-arrow-right mr-2"></i>
+                    Jelajahi Sekarang
+                </button>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1730376077">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sejarah Section -->
+    <section id="sejarah" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Perjalanan Kami</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Melihat kembali perjalanan 5 tahun OSIS MPK dalam membangun prestasi dan membentuk generasi unggul
+                </p>
+            </div>
+
+            <div class="relative">
+                <div
+                    class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-400 to-blue-600">
+                </div>
+
+                <div class="space-y-24">
+                    <!-- 2020 -->
+                    <div class="relative" data-aos="fade-up">
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-xl"
+                            style="top: 50%;"></div>
+                        <div class="md:flex items-center md:space-x-8">
+                            <div class="md:w-1/2 md:text-right mb-8 md:mb-0 md:pr-8">
+                                <div
+                                    class="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                                    <span class="text-2xl font-bold">2020</span>
+                                </div>
+                                <p class="mt-4 text-gray-600 italic">"Langkah awal menuju perubahan yang berarti"</p>
+                            </div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="relative group">
+                                    <img src="2020.jpeg" alt="2020"
+                                        class="w-full h-48 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="relative" data-aos="fade-up">
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-xl"
+                            style="top: 50%;"></div>
+                        <div class="md:flex items-center md:space-x-8 flex-row-reverse">
+                            <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                                <div
+                                    class="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                                    <span class="text-2xl font-bold">2021</span>
+                                </div>
+                                <p class="mt-4 text-gray-600 italic">"Bersama dalam jarak, bersatu dalam semangat"</p>
+                            </div>
+                            <div class="md:w-1/2 md:pr-8">
+                                <div class="relative group">
+                                    <img src="2021.jpeg" alt="2021"
+                                        class="w-full h-48 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="relative" data-aos="fade-up">
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-xl"
+                            style="top: 50%;"></div>
+                        <div class="md:flex items-center md:space-x-8">
+                            <div class="md:w-1/2 md:text-right mb-8 md:mb-0 md:pr-8">
+                                <div
+                                    class="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                                    <span class="text-2xl font-bold">2022</span>
+                                </div>
+                                <p class="mt-4 text-gray-600 italic">"Merajut asa, menggapai cita bersama"</p>
+                            </div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="relative group">
+                                    <img src="2022.jpeg" alt="2022"
+                                        class="w-full h-48 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="relative" data-aos="fade-up">
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-xl"
+                            style="top: 50%;"></div>
+                        <div class="md:flex items-center md:space-x-8 flex-row-reverse">
+                            <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                                <div
+                                    class="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                                    <span class="text-2xl font-bold">2023</span>
+                                </div>
+                                <p class="mt-4 text-gray-600 italic">"Melangkah maju dengan keberanian dan keyakinan"
+                                </p>
+                            </div>
+                            <div class="md:w-1/2 md:pr-8">
+                                <div class="relative group">
+                                    <img src="2023.jpeg" alt="2023"
+                                        class="w-full h-48 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="relative" data-aos="fade-up">
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-xl"
+                            style="top: 50%;"></div>
+                        <div class="md:flex items-center md:space-x-8">
+                            <div class="md:w-1/2 md:text-right mb-8 md:mb-0 md:pr-8">
+                                <div
+                                    class="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                                    <span class="text-2xl font-bold">2024</span>
+                                </div>
+                                <p class="mt-4 text-gray-600 italic">"Bersama-sama, kita tulis sejarah baru"</p>
+                            </div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="relative group">
+                                    <img src="2024.jpeg" alt="2024"
+                                        class="w-full h-48 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="visimisi" class="relative bg-white py-24 overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-6xl font-bold text-center mb-20 text-gray-800" data-aos="fade-up">
+                Visi & Misi
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-12 items-stretch">
+                <!-- Visi card -->
+                <div class="flex-1 bg-white p-8 rounded-lg shadow-md border border-gray-200" data-aos="fade-right">
+                    <h3 class="text-3xl font-semibold mb-6 text-gray-800 text-center">Visi</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Menjadi organisasi siswa yang <span class="font-semibold text-gray-800">inspiratif</span> dan
+                        <span class="font-semibold text-gray-800">inovatif</span>, memimpin dengan integritas dan
+                        kreativitas.
+                    </p>
+                </div>
+
+                <!-- Misi card -->
+                <div class="flex-1 bg-white p-8 rounded-lg shadow-md border border-gray-200" data-aos="fade-left">
+                    <h3 class="text-3xl font-semibold mb-6 text-gray-800 text-center">Misi</h3>
+                    <ul class="text-gray-600 space-y-4">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span class="text-lg">Mengembangkan potensi siswa secara holistik</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span class="text-lg">Membangun karakter kepemimpinan yang tangguh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span class="text-lg">Meningkatkan prestasi sekolah ke tingkat internasional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave transition -->
+        <div class="custom-shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    style="fill: #ffffff;"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Kegiatan Section -->
+    <section id="kegiatan" class="section-height relative bg-white flex items-center py-20 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <!-- Judul dengan animasi dan efek yang lebih menarik -->
+            <h2 class="text-5xl font-extrabold text-center mb-20 relative" data-aos="fade-up">
+                <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <i class="fas fa-calendar-alt mr-3 animate-pulse"></i>Kegiatan Kami
+                </span>
+                <div
+                    class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500">
+                </div>
+            </h2>
+
+            <!-- Grid Kegiatan -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- LDKS -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-blue-500 bg-cover bg-center overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('LDKS.JPG'); filter: blur(2px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-blue-500 to-purple-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-users text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 
+        transition-colors duration-300">
+                        LDKS
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Latihan Dasar Kepemimpinan Siswa
+                    </p>
+                </div>
+
+
+
+
+                <!-- LDKO -->
+                <div class="group relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-purple-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('LDKO.JPG'); filter: blur(2px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-purple-500 to-pink-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800 group-hover:text-purple-600 
+        transition-colors duration-300 text-white">
+                        LDKO
+                    </h3>
+                    <p
+                        class="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 font-semibold text-white">
+                        Latihan Dasar Kepemimpinan Organisasi
+                    </p>
+                </div>
+
+
+
+                <!-- MPLS -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-green-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('MPLS.JPG'); filter: blur(2px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-green-500 to-teal-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-school text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-green-300 
+        transition-colors duration-300">
+                        MPLS
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Masa Pengenalan Lingkungan Sekolah
+                    </p>
+                </div>
+
+
+                <!-- AMANSIVE -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-yellow-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="400">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('Amansive.JPG'); filter: blur(2px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-birthday-cake text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-yellow-300 
+        transition-colors duration-300">
+                        AMANSIVE
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Ulang Tahun Sekolah
+                    </p>
+                </div>
+
+
+                <!-- Class Meeting -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-red-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="500">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('Classmeet.JPG'); filter: blur(2px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-red-500 to-pink-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-trophy text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-red-300 
+        transition-colors duration-300">
+                        Class Meeting
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Kompetisi Antar Kelas
+                    </p>
+                </div>
+
+
+                <!-- Isra Mi'raj -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-indigo-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="600">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('IsraMi\'raj.JPG'); filter: blur(2px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-indigo-500 to-blue-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-mosque text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-indigo-300 
+        transition-colors duration-300">
+                        Isra Mi'raj
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Perayaan Hari Besar Isra Mi'raj
+                    </p>
+                </div>
+
+
+                <!-- Maulid Nabi -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-orange-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="700">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('2024.jpeg'); filter: blur(5px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-orange-500 to-yellow-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fas fa-praying-hands text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-orange-300 
+        transition-colors duration-300">
+                        Maulid Nabi
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Peringatan Maulid Nabi Muhammad SAW
+                    </p>
+                </div>
+
+
+                <!-- Sanlat -->
+                <div class="group relative p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+     transform hover:-translate-y-2 border border-gray-100 hover:border-pink-500 overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="700">
+
+                    <!-- Background image with blur effect -->
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('2024.jpeg'); filter: blur(5px); z-index: -1; opacity: 0.5;">
+                    </div>
+
+                    <!-- Icon and text content -->
+                    <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-full 
+         bg-gradient-to-r from-red-500 to-pink-500 group-hover:scale-110 
+         transition-transform duration-300">
+                        <i class="fa-solid fa-weight-scale text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-red-300 
+        transition-colors duration-300">
+                        Sanlat
+                    </h3>
+                    <p
+                        class="text-sm text-white group-hover:text-gray-700 transition-colors duration-300 font-semibold">
+                        Program Pesantren Kilat
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-full 
+                blur-3xl opacity-70 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-32 h-32 bg-purple-50 rounded-full 
+                blur-3xl opacity-70 translate-x-1/2 translate-y-1/2"></div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="galeri" class="py-20 bg-white relative">
+        <div class="container mx-auto px-6">
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        Galeri
+                    </span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Kumpulan dokumentasi kegiatan OSIS SMK Negeri 65 Jakarta
+                </p>
+            </div>
+
+            <!-- Drive Access Card -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Icon -->
+                        <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-12 h-12 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
+                            </svg>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-2xl font-bold mb-4">Dokumentasi Lengkap</h3>
+                        <p class="text-gray-600 mb-8 max-w-lg">
+                            Akses seluruh dokumentasi kegiatan OSIS SMK Negeri 65 Jakarta dalam satu tempat, termasuk
+                            foto-foto MPLS, LDKS, dan berbagai acara lainnya.
+                        </p>
+
+                        <!-- Button -->
+                        <a href="https://drive.google.com/drive/folders/1ZZb9GnJ9lUaCyz7OpIvEdxVkooS5_-ob?usp=sharing"
+                            target="_blank"
+                            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1">
+                            <span class="text-lg font-semibold">Buka Google Drive</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Shape Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none" class="relative block w-full h-[60px]">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="fill-gray-100"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section Kontak -->
+    <section id="kontak" class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Address School</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Maps -->
+                <div class="rounded-lg overflow-hidden shadow-md h-[450px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3553.113572249019!2d106.87573757445281!3d-6.228562493759564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f325cc3523e1%3A0x5e6945075e20de57!2sSMK%20Negeri%2065%20Jakarta!5e1!3m2!1sid!2sid!4v1730372200545!5m2!1sid!2sid"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+                    </iframe>
+                </div>
+
+                <!-- Info -->
+                <div class="space-y-10">
+                    <!-- School Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">SMK Negeri 65 Jakarta</h3>
+                        <p class="text-blue-600 font-medium mb-2">Organisasi Siswa Intra Sekolah</p>
+                        <p class="text-gray-600">
+                            Jalan IPN Kebon Nanas, RT.9/RW.6, Cipinang Besar Selatan
+                            <br>
+                            Jakarta Timur, 12440
+                        </p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="space-y-4">
+                        <a href="mailto:smknegeri65jkt.sch.id" class="flex items-center group">
+                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-gray-600 group-hover:text-blue-600 transition">smknegeri65jkt.sch.id</span>
+                        </a>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-600">+62815 1192 7805</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Media Sosial</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://instagram.com/osismpk65jkt"
+                                class="flex items-center px-5 py-2 bg-white rounded-lg hover:bg-gray-200 transition">
+                                <i class="fab fa-instagram text-gray-600 mr-2"></i>
+                                <span class="text-gray-600">@osismpk65jkt</span>
+                            </a>
+                            <a href="https://youtube.com/@osismpk65jkt"
+                                class="flex items-center px-5 py-2 bg-white rounded-lg hover:bg-gray-200 transition">
+                                <i class="fab fa-youtube text-gray-600 mr-2"></i>
+                                <span class="text-gray-600">osismpk65jkt</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-gradient-to-r from-blue-500 to-purple-500 text-white p-10 overflow-hidden">
+        <!-- Shape Divider Top -->
+        <div class="custom-shape-divider-top-1730434360 pointer-events-none">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center py-44">
+            <h1 class="text-md md:text-3xl font-bold mb-4">
+                Banyak pengalaman dan koneksi yang bisa kalian dapatkan dengan mengikuti kepengurusan OSIS MPK.
+            </h1>
+            <h1 class="text-md md:text-2xl font-semibold">
+                Ayo join sekarang!
+            </h1>
+        </div>
+
+        <!-- Styles -->
+        <style>
+            .custom-shape-divider-top-1730434360,
+            .custom-shape-divider-bottom-1730434360 {
+                position: absolute;
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+            }
+
+            .custom-shape-divider-top-1730434360 {
+                top: 0;
+                left: 0;
+            }
+
+            .custom-shape-divider-bottom-1730434360 {
+                bottom: 0;
+                left: 0;
+                transform: rotate(180deg);
+            }
+
+            .custom-shape-divider-top-1730434360 .shape-fill,
+            .custom-shape-divider-bottom-1730434360 .shape-fill {
+                fill: #FFFFFF;
+            }
+        </style>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-gray-300">
+                    <h3 class="text-xl font-bold mb-4 text-white">About Us</h3>
+                    <p class="text-gray-400">
+                        OSIS MPK 65 Jakarta adalah organisasi siswa yang berfokus pada pengembangan potensi siswa dan
+                        meningkatkan prestasi sekolah.
+                    </p>
+                </div>
+                <div class="text-gray-300">
+                    <h3 class="text-xl font-bold mb-4 text-white">Contact</h3>
+                    <ul class="text-gray-400">
+                        <li>Jalan IPN Kebon Nanas, RT.9/RW.6, Cipinang Besar Selatan</li>
+                        <li>Telepon: 088888888888</li>
+                        <li>Email: osismpk65@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="text-gray-300">
+                    <h3 class="text-xl font-bold mb-4 text-white">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 OSIS MPK 65 Jakarta</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+        AOS.init();
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg ",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    <script>
+        const socket = new WebSocket('ws://localhost:1234'); // Ganti 8080 dengan port yang Anda inginkan
+    </script>
+
+</body>
+
+</html>
