@@ -1,49 +1,46 @@
-# Website OSIS MPK SMKN 65 Jakarta
+# 🌟 OSIS & MPK SMKN 65 Jakarta - Official Website (Modern Edition)
 
-![OSIS MPK SMKN 65 Jakarta]
+Website profil resmi Organisasi Siswa Intra Sekolah (OSIS) dan Majelis Perwakilan Kelas (MPK) SMK Negeri 65 Jakarta dengan standar teknologi web 2026.
 
-## Deskripsi
+## ⚡ Tech Stack Dewa 2026
+- **Core Framework**: [Astro 5](https://astro.build) (Islands Architecture, Zero-JS by default)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) (Rust-powered ultra-fast compiler)
+- **Language**: TypeScript (Strict typing)
+- **Image Engine**: Astro Image (`astro:assets` powered by Sharp) untuk konversi otomatis seluruh foto mentah ke WebP/AVIF responsif
+- **Typography**: Plus Jakarta Sans (Headings & UI) + Geist Sans (Body text)
+- **Icons**: Lucide Icons (Tree-shakable SVG)
+- **Deployment**: Vercel Ready (Zero-config)
 
-Website resmi OSIS MPK SMKN 65 Jakarta yang menampilkan informasi tentang organisasi, kegiatan, dan galeri foto. Website ini dibuat dengan menggunakan HTML, CSS (Tailwind CSS), dan JavaScript.
+## 📂 Struktur Proyek
+```text
+ospk-modern/
+├── public/                # Aset statis (favicon, logo)
+├── src/
+│   ├── assets/            # Gambar foto kegiatan & sejarah asli (otomatis di-compress ke WebP)
+│   ├── components/        # Komponen modular (Navbar, Hero, VisiMisi, BentoKegiatan, SejarahTimeline, Galeri, Kontak, Footer)
+│   ├── data/              # Data terpisah dari tampilan (siteConfig, kegiatanList, sejarahTimeline, visiMisiData)
+│   ├── layouts/           # Base Layout & SEO metadata
+│   ├── styles/            # Tailwind v4 Global CSS & Glassmorphism
+│   └── pages/             # index.astro (Landing page)
+├── astro.config.mjs
+└── package.json
+```
 
-## Fitur
+## 🚀 Cara Menjalankan Secara Lokal
+```bash
+# 1. Masuk ke folder proyek
+cd ospk-modern
 
-- Responsif untuk berbagai ukuran layar
-- Animasi scroll menggunakan AOS (Animate On Scroll)
-- Particle.js untuk efek latar belakang yang interaktif
-- Galeri foto kegiatan
-- Informasi kontak dan media sosial
+# 2. Jalankan server development
+npm run dev
 
-## Teknologi yang Digunakan
+# 3. Atau buat bundle build produksi
+npm run build
+npm run preview
+```
 
-- HTML5
-- CSS3 (Tailwind CSS)
-- JavaScript
-- AOS (Animate On Scroll)
-- Font Awesome
-- Particle.js
-
-## Instalasi dan Penggunaan
-
-1. Clone repositori ini:
-git clone https://github.com/your-username/osis-mpk-65-website.git
-
-2. Buka file `index.html` di browser Anda.
-
-## Kontributor
-
-Proyek ini adalah hasil kerjasama dari:
-
-- Athaillah Nazhif Firdaus (Sekretaris OSIS 1 Angkatan 4)
-- Rasya Nouval Nugraha (Wakil Ketua MPK Angkatan 4)
-
-## Lisensi
-
-[MIT License](LICENSE)
-
-## Kontak
-
-Untuk informasi lebih lanjut, silakan hubungi:
-- Email: osismpk65@gmail.com
-- Instagram: [@osismpk65jkt](https://instagram.com/osismpk65jkt)
-- YouTube: [OSIS MPK 65 Jakarta](https://youtube.com/@osismpk65jkt)
+## 🌐 Deploy ke Vercel (1-Klik)
+1. Push repositori ini ke GitHub (`git init`, `git add .`, `git commit -m "feat: modernize OSPK website"`, `git push`).
+2. Buka [Vercel](https://vercel.com) -> Klik **"Add New Project"** -> Pilih repositori GitHub ini.
+3. Framework Preset akan otomatis terdeteksi sebagai **Astro**.
+4. Klik **Deploy**! Website akan langsung live dalam beberapa detik.

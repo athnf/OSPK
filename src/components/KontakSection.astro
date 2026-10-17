@@ -1,0 +1,126 @@
+---
+import { siteConfig } from '../data/site';
+---
+
+<section id="kontak" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-b border-slate-200">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="max-w-2xl mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-blue-700 block mb-2">
+        Informasi Kontak & Lokasi
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Sekretariat & Alamat Sekolah
+      </h2>
+      <p class="text-sm sm:text-base text-slate-600 mt-2">
+        Lokasi gedung sekolah dan kontak penghubung resmi OSIS MPK SMK Negeri 65 Jakarta.
+      </p>
+    </div>
+
+    <!-- Grid Maps & Info -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+      
+      <!-- Maps Embed (7 cols) -->
+      <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-200 h-[360px] sm:h-[420px] bg-slate-200 shadow-xs">
+        <iframe
+          src={siteConfig.school.gmapsEmbed}
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full h-full"
+          title="Peta Lokasi SMK Negeri 65 Jakarta"
+        ></iframe>
+      </div>
+
+      <!-- Info Cards (5 cols) -->
+      <div class="lg:col-span-5 space-y-4">
+        
+        <!-- School Identity Card -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200">
+          <span class="text-xs font-semibold text-slate-500 block mb-1">
+            Gedung Sekolah
+          </span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">
+            {siteConfig.school.name}
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            {siteConfig.school.address}
+          </p>
+        </div>
+
+        <!-- Contact Channels -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold flex-shrink-0">
+              @
+            </span>
+            <div class="overflow-hidden">
+              <span class="block text-[11px] font-medium text-slate-400">Email Sekolah</span>
+              <a href={`mailto:${siteConfig.school.email}`} class="text-xs sm:text-sm font-semibold text-slate-800 hover:text-blue-700 transition-colors">
+                {siteConfig.school.email}
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold flex-shrink-0">
+              WA
+            </span>
+            <div>
+              <span class="block text-[11px] font-medium text-slate-400">Telepon / WhatsApp</span>
+              <a href="tel:+6281511927805" class="text-xs sm:text-sm font-semibold text-slate-800 hover:text-blue-700 transition-colors">
+                {siteConfig.school.phone}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media Cards -->
+        <div class="grid grid-cols-2 gap-3">
+          <a 
+            href={siteConfig.socials.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white p-4 rounded-xl border border-slate-200 hover:border-slate-300 text-center transition-colors"
+          >
+            <span class="block text-xs font-bold text-slate-900">Instagram</span>
+            <span class="block text-[11px] text-slate-500 mt-0.5">@osismpk65jkt</span>
+          </a>
+
+          <a 
+            href={siteConfig.socials.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white p-4 rounded-xl border border-slate-200 hover:border-slate-300 text-center transition-colors"
+          >
+            <span class="block text-xs font-bold text-slate-900">YouTube</span>
+            <span class="block text-[11px] text-slate-500 mt-0.5">osismpk65jkt</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Realistic School Notice Box (No AI slop recruitment pitch) -->
+    <div class="p-6 bg-white rounded-2xl border border-slate-200 text-slate-700 text-xs sm:text-sm leading-relaxed flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <span class="font-bold text-slate-900 block mb-0.5">Informasi Seleksi Pengurus Baru</span>
+        <span class="text-slate-500">Pendaftaran dan seleksi calon pengurus OSIS & MPK periode mendatang diumumkan melalui wali kelas dan akun Instagram resmi.</span>
+      </div>
+      <a 
+        href={siteConfig.socials.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-4 py-2 rounded-lg text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors flex-shrink-0"
+      >
+        Pantau di Instagram
+      </a>
+    </div>
+
+  </div>
+</section>

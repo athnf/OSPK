@@ -1,0 +1,143 @@
+---
+import { Image } from 'astro:assets';
+import logoOsis from '../assets/brand/logo-osis.png';
+import logoMpk from '../assets/brand/logo-mpk.png';
+import { siteConfig } from '../data/site';
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      
+      <!-- Brand Logos & Title -->
+      <a href="#home" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-600 rounded-lg">
+        <div class="flex items-center -space-x-1">
+          <Image 
+            src={logoOsis} 
+            alt="Logo OSIS SMKN 65" 
+            width={36} 
+            height={36} 
+            class="w-8 h-8 sm:w-9 sm:h-9 object-contain" 
+          />
+          <Image 
+            src={logoMpk} 
+            alt="Logo MPK SMKN 65" 
+            width={36} 
+            height={36} 
+            class="w-8 h-8 sm:w-9 sm:h-9 object-contain" 
+          />
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm sm:text-base font-bold tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors">
+            OSIS & MPK 65
+          </span>
+          <span class="text-[11px] text-slate-500 font-normal leading-none">
+            SMK Negeri 65 Jakarta
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Navigasi Utama">
+        {siteConfig.navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-xs sm:text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Right Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a 
+          href={siteConfig.socials.driveGallery} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-blue-700 hover:bg-blue-800 transition-colors shadow-sm"
+        >
+          <span>Buka Google Drive</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        id="mobile-menu-toggle"
+        class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        aria-label="Buka Menu Navigasi"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Dropdown -->
+    <div 
+      id="mobile-drawer" 
+      class="hidden md:hidden py-4 border-t border-slate-200 bg-white"
+    >
+      <div class="flex flex-col space-y-2">
+        {siteConfig.navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="mobile-nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-blue-700"
+          >
+            {link.label}
+          </a>
+        ))}
+        <div class="pt-2 border-t border-slate-100">
+          <a
+            href={siteConfig.socials.driveGallery}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-center py-2.5 rounded-lg text-xs font-semibold text-white bg-blue-700 hover:bg-blue-800"
+          >
+            Buka Google Drive Dokumentasi
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function toggleMenu() {
+    const isClosed = drawer?.classList.contains('hidden');
+    if (isClosed) {
+      drawer?.classList.remove('hidden');
+      iconOpen?.classList.add('hidden');
+      iconClose?.classList.remove('hidden');
+    } else {
+      drawer?.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    }
+  }
+
+  toggleBtn?.addEventListener('click', toggleMenu);
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      drawer?.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    });
+  });
+</script>

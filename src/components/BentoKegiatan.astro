@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import { kegiatanList } from '../data/kegiatan';
+
+const categories = ['Semua', 'Kepemimpinan', 'Kesiswaan', 'Kompetisi', 'Pentas Seni', 'Keagamaan'];
+---
+
+<section id="kegiatan" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 block mb-2">
+          Agenda Kesiswaan
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Program Kerja & Kegiatan
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2 max-w-xl">
+          Dokumentasi agenda rutin tahunan dan program kerja yang dikoordinasikan oleh OSIS & MPK SMKN 65 Jakarta.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-1.5" id="filter-buttons">
+        {categories.map((cat, idx) => (
+          <button
+            type="button"
+            data-filter={cat}
+            class={`category-pill px-3.5 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+              idx === 0 
+                ? 'active bg-slate-900 text-white' 
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Clean Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="kegiatan-grid">
+      {kegiatanList.map((item) => (
+        <article 
+          data-category={item.category}
+          class="kegiatan-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-slate-300 hover:shadow-md transition-all flex flex-col group"
+        >
+          <!-- Image Container with Sharp WebP Auto-Resize -->
+          <div class="relative aspect-video w-full overflow-hidden bg-slate-100 border-b border-slate-100">
+            <Image 
+              src={item.image} 
+              alt={item.title}
+              widths={[380, 640]}
+              sizes="(max-width: 768px) 100vw, 33vw"
+              format="webp"
+              quality={82}
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/90 backdrop-blur-sm text-slate-700 border border-slate-200/80 shadow-xs">
+              {item.category}
+            </span>
+          </div>
+
+          <!-- Content Body -->
+          <div class="p-5 flex flex-col flex-1 justify-between">
+            <div>
+              <span class="text-[11px] font-medium text-slate-400 block mb-1">
+                {item.subtitle}
+              </span>
+              <h3 class="text-base font-bold text-slate-900 leading-snug mb-2 group-hover:text-blue-700 transition-colors">
+                {item.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                {item.description}
+              </p>
+            </div>
+
+            <!-- Footer Tag -->
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="font-medium text-slate-500">{item.tag}</span>
+              <span class="text-blue-700 font-medium">SMKN 65</span>
+            </div>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const filterButtons = document.querySelectorAll('.category-pill');
+  const cards = document.querySelectorAll('.kegiatan-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Set active button
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active', 'bg-slate-900', 'text-white');
+        btn.classList.add('bg-slate-100', 'text-slate-600');
+      });
+      button.classList.add('active', 'bg-slate-900', 'text-white');
+      button.classList.remove('bg-slate-100', 'text-slate-600');
+
+      const filter = button.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        const itemCategory = card.getAttribute('data-category');
+        if (filter === 'Semua' || itemCategory === filter) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

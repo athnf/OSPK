@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import logoOsis from '../assets/brand/logo-osis.png';
+import logoMpk from '../assets/brand/logo-mpk.png';
+import { siteConfig } from '../data/site';
+---
+
+<footer class="bg-white border-t border-slate-200 py-10 px-4 sm:px-6 lg:px-8 text-slate-500 text-xs">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+    
+    <div class="flex items-center gap-3">
+      <div class="flex items-center -space-x-1">
+        <Image src={logoOsis} alt="Logo OSIS" width={28} height={28} class="w-7 h-7 object-contain" />
+        <Image src={logoMpk} alt="Logo MPK" width={28} height={28} class="w-7 h-7 object-contain" />
+      </div>
+      <div>
+        <span class="block text-sm font-bold text-slate-900">OSIS & MPK SMKN 65 Jakarta</span>
+        <span class="text-[11px] text-slate-400">Jalan IPN Kebon Nanas, Jatinegara, Jakarta Timur</span>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-slate-600">
+      {siteConfig.navLinks.map((link) => (
+        <a href={link.href} class="hover:text-blue-700 transition-colors">
+          {link.label}
+        </a>
+      ))}
+      <a href={siteConfig.socials.driveGallery} target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">
+        Google Drive
+      </a>
+    </div>
+
+    <div class="text-slate-400 text-[11px]">
+      &copy; {new Date().getFullYear()} OSIS & MPK SMK Negeri 65 Jakarta
+    </div>
+
+  </div>
+</footer>
