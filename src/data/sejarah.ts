@@ -2,51 +2,75 @@ import hist2020 from '../assets/history/2020.jpeg';
 import hist2021 from '../assets/history/2021.jpeg';
 import hist2022 from '../assets/history/2022.jpeg';
 import hist2023 from '../assets/history/2023.jpeg';
-import hist2024 from '../assets/history/2024.jpeg';
 import type { ImageMetadata } from 'astro';
 
-export interface SejarahItem {
-  year: string;
+export interface AngkatanItem {
+  period: string; // e.g. "2020/2021"
+  generation: string; // e.g. "Angkatan I"
   theme: string;
-  quote: string;
+  quote?: string;
   description: string;
-  image: ImageMetadata;
+  image?: ImageMetadata;
+  status: 'Arsip Terdokumentasi' | 'Masa Bakti Berjalan' | 'Periode Mendatang';
 }
 
-export const sejarahTimeline: SejarahItem[] = [
+export const silsilahAngkatan: AngkatanItem[] = [
   {
-    year: "2020",
-    theme: "Kepengurusan Masa Transisi",
+    period: "2020/2021",
+    generation: "Generasi 2020",
+    theme: "Langkah Awal Perubahan",
     quote: "Langkah awal menuju perubahan yang berarti",
-    description: "Penyesuaian pertama format koordinasi siswa secara daring di masa awal pembatasan tatap muka.",
+    description: "Fondasi adaptasi perdana koordinasi kepengurusan siswa di masa awal transisi digital.",
     image: hist2020,
+    status: "Arsip Terdokumentasi",
   },
   {
-    year: "2021",
-    theme: "Koordinasi dan Kegiatan Terbatas",
+    period: "2021/2022",
+    generation: "Generasi 2021",
+    theme: "Solidaritas Dalam Jarak",
     quote: "Bersama dalam jarak, bersatu dalam semangat",
-    description: "Pelaksanaan program kerja berformat kombinasi daring dan bertahap menjaga komunikasi perwakilan kelas.",
+    description: "Konsistensi komunikasi perwakilan kelas dan pelaksanaan program kesiswaan secara bertahap.",
     image: hist2021,
+    status: "Arsip Terdokumentasi",
   },
   {
-    year: "2022",
-    theme: "Kembalinya Kegiatan Lapangan",
+    period: "2022/2023",
+    generation: "Generasi 2022",
+    theme: "Merajut Asa Bersama",
     quote: "Merajut asa, menggapai cita bersama",
-    description: "Penyelenggaraan kembali kegiatan tatap muka di area sekolah, apel bendera, dan penyambutan siswa baru.",
+    description: "Kembalinya pelaksanaan kegiatan tatap muka di lingkungan sekolah, apel bendera, dan MPLS.",
     image: hist2022,
+    status: "Arsip Terdokumentasi",
   },
   {
-    year: "2023",
-    theme: "Penyegaran Program Antarkelas",
+    period: "2023/2024",
+    generation: "Generasi 2023",
+    theme: "Keberanian & Keyakinan",
     quote: "Melangkah maju dengan keberanian dan keyakinan",
-    description: "Pelaksanaan kembali kegiatan class meeting, perlombaan antarkelas, dan peringatan hari besar secara penuh.",
+    description: "Pelaksanaan kembali kegiatan class meeting, gebyar HUT sekolah, dan turnamen olahraga antarkelas secara penuh.",
     image: hist2023,
+    status: "Arsip Terdokumentasi",
   },
   {
-    year: "2024",
-    theme: "Konsolidasi OSIS & MPK",
+    period: "2024/2025",
+    generation: "Generasi 2024",
+    theme: "Masa Bakti Aktif",
     quote: "Bersama-sama, kita tulis sejarah baru",
-    description: "Peningkatan koordinasi antara pengurus OSIS dan majelis perwakilan kelas dalam mengawal kegiatan kesiswaan sekolah.",
-    image: hist2024,
+    description: "Konsolidasi kepengurusan aktif dalam mengawal agenda tahunan dan aspirasi siswa.",
+    status: "Masa Bakti Berjalan",
+  },
+  {
+    period: "2025/2026",
+    generation: "Generasi 2025",
+    theme: "Kaderisasi & Regenerasi",
+    description: "Periode regenerasi estafet kepemimpinan pengurus OSIS dan MPK SMKN 65 Jakarta.",
+    status: "Periode Mendatang",
+  },
+  {
+    period: "2026/2027",
+    generation: "Generasi 2026",
+    theme: "Estafet Kepengurusan",
+    description: "Periode kepengurusan masa depan siswa-siswi SMK Negeri 65 Jakarta.",
+    status: "Periode Mendatang",
   },
 ];
