@@ -2,37 +2,176 @@
 import { Image } from 'astro:assets';
 import logoOsis from '../assets/brand/logo-osis.png';
 import logoMpk from '../assets/brand/logo-mpk.png';
+import logoSmk from '../assets/brand/logo-smkn65.png';
 import { siteConfig } from '../data/site';
 ---
 
-<footer class="bg-white border-t border-slate-200 py-10 px-4 sm:px-6 lg:px-8 text-slate-500 text-xs">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+<footer class="bg-white border-t-2 border-slate-200 text-slate-600 text-xs relative overflow-hidden">
+  
+  <!-- Subtle architectural grid texture -->
+  <div class="absolute inset-0 grid-pattern opacity-40 pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
     
-    <div class="flex items-center gap-3">
-      <div class="flex items-center -space-x-1">
-        <Image src={logoOsis} alt="Logo OSIS" width={28} height={28} class="w-7 h-7 object-contain" />
-        <Image src={logoMpk} alt="Logo MPK" width={28} height={28} class="w-7 h-7 object-contain" />
+    <!-- Top Identity Bar -->
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-12 border-b border-slate-200">
+      
+      <div class="flex items-center gap-4">
+        <!-- Dual Insignia Logos -->
+        <div class="flex items-center -space-x-1.5 p-2 bg-slate-50 rounded-2xl border border-slate-200 shadow-2xs">
+          <Image src={logoOsis} alt="Logo OSIS" width={36} height={36} class="w-9 h-9 object-contain" />
+          <Image src={logoMpk} alt="Logo MPK" width={36} height={36} class="w-9 h-9 object-contain" />
+          <Image src={logoSmk} alt="Logo SMKN 65" width={36} height={36} class="w-9 h-9 object-contain" />
+        </div>
+        
+        <div>
+          <span class="block text-base sm:text-lg font-black text-slate-900 tracking-tight">
+            OSIS & MPK SMK Negeri 65 Jakarta
+          </span>
+          <span class="text-xs text-slate-500 font-medium">
+            Lembaga Eksekutif & Legislatif Kesiswaan Resmi &bull; Jatinegara
+          </span>
+        </div>
       </div>
-      <div>
-        <span class="block text-sm font-bold text-slate-900">OSIS & MPK SMKN 65 Jakarta</span>
-        <span class="text-[11px] text-slate-400">Jalan IPN Kebon Nanas, Jatinegara, Jakarta Timur</span>
-      </div>
-    </div>
 
-    <!-- Quick Links -->
-    <div class="flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-slate-600">
-      {siteConfig.navLinks.map((link) => (
-        <a href={link.href} class="hover:text-blue-700 transition-colors">
-          {link.label}
-        </a>
-      ))}
-      <a href={siteConfig.socials.driveGallery} target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">
-        Google Drive
+      <!-- Back to Top Button -->
+      <a 
+        href="#home" 
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all shadow-2xs group flex-shrink-0"
+        aria-label="Kembali ke atas halaman"
+      >
+        <span>Kembali ke Atas</span>
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
       </a>
+
     </div>
 
-    <div class="text-slate-400 text-[11px]">
-      &copy; {new Date().getFullYear()} OSIS & MPK SMK Negeri 65 Jakarta
+    <!-- Main 3-Column Structured Information -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 py-12 border-b border-slate-200">
+      
+      <!-- Column 1: School Identity & Address (5 cols) -->
+      <div class="md:col-span-5 space-y-3">
+        <span class="text-[11px] font-black uppercase tracking-wider text-blue-700 block">
+          Sekretariat Kesiswaan
+        </span>
+        <h4 class="text-sm font-bold text-slate-900 leading-snug">
+          Gedung Utama SMK Negeri 65 Jakarta
+        </h4>
+        <p class="text-xs text-slate-600 leading-relaxed font-normal">
+          {siteConfig.school.address}
+        </p>
+        <div class="pt-2 text-xs space-y-1 text-slate-500">
+          <div><span class="font-semibold text-slate-700">Telepon Hunting:</span> {siteConfig.school.phone}</div>
+          <div><span class="font-semibold text-slate-700">WhatsApp Kesiswaan:</span> {siteConfig.school.whatsapp}</div>
+          <div><span class="font-semibold text-slate-700">Email:</span> {siteConfig.school.email}</div>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigation & Program Unggulan (3 cols) -->
+      <div class="md:col-span-3 space-y-3">
+        <span class="text-[11px] font-black uppercase tracking-wider text-blue-700 block">
+          Navigasi & Program
+        </span>
+        <ul class="space-y-2 text-xs font-medium text-slate-600">
+          <li>
+            <a href="#kegiatan" class="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+              Program Kerja Unggulan
+            </a>
+          </li>
+          <li>
+            <a href="#visimisi" class="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+              Visi & Misi Organisasi
+            </a>
+          </li>
+          <li>
+            <a href="#sejarah" class="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+              Silsilah Angkatan 2020–2027
+            </a>
+          </li>
+          <li>
+            <a href="#galeri" class="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+              Galeri Dokumentasi Foto
+            </a>
+          </li>
+          <li>
+            <a href="#kontak" class="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+              Peta Lokasi & Kontak
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Saluran Publikasi & Arsip Resmi (4 cols) -->
+      <div class="md:col-span-4 space-y-3">
+        <span class="text-[11px] font-black uppercase tracking-wider text-blue-700 block">
+          Arsip & Publikasi Siswa
+        </span>
+        
+        <!-- Google Drive Dedicated Card -->
+        <a 
+          href={siteConfig.socials.driveGallery} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="p-3.5 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-all flex items-center justify-between group shadow-2xs"
+        >
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">
+              GD
+            </div>
+            <div>
+              <span class="block text-xs font-bold text-slate-900 group-hover:text-blue-700 transition-colors">Google Drive Dokumentasi</span>
+              <span class="block text-[11px] text-slate-500">Arsip Foto Resolusi Penuh</span>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+
+        <!-- Media Sosial Badges -->
+        <div class="flex items-center gap-2 pt-1">
+          <a 
+            href={siteConfig.socials.instagram} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex-1 p-2.5 rounded-xl border border-slate-200 bg-white hover:border-pink-300 text-center text-xs font-semibold text-slate-700 hover:text-pink-600 transition-colors"
+          >
+            Instagram
+          </a>
+          <a 
+            href={siteConfig.socials.youtube} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex-1 p-2.5 rounded-xl border border-slate-200 bg-white hover:border-red-300 text-center text-xs font-semibold text-slate-700 hover:text-red-600 transition-colors"
+          >
+            YouTube
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright & Architecture Notice -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+      <div>
+        &copy; {new Date().getFullYear()} <strong>OSIS & MPK SMK Negeri 65 Jakarta</strong>. Seluruh hak cipta dilindungi.
+      </div>
+      
+      <div class="flex items-center gap-3 font-mono text-[10px] text-slate-400">
+        <span>Astro 5</span>
+        <span>&bull;</span>
+        <span>Tailwind CSS v4</span>
+        <span>&bull;</span>
+        <span>Vercel Edge</span>
+      </div>
     </div>
 
   </div>
