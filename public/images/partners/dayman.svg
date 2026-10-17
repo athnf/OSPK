@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- DayMan Masculine Crest -->
+  <polygon points="12,10 38,10 48,50 22,50" fill="#312e81"/>
+  <polygon points="26,10 48,10 38,50 16,50" fill="#4338ca" opacity="0.8"/>
+  <!-- D & M stylized lines -->
+  <text x="18" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" font-style="italic" fill="#ffffff">DM</text>
+  <!-- Dayman Wordmark -->
+  <text x="60" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="27" font-weight="900" font-style="italic" letter-spacing="1" fill="#1e1b4b">DAYMAN</text>
+  <text x="62" y="49" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="800" letter-spacing="3" fill="#4338ca">FOR MEN • COLOGNE</text>
+</svg>

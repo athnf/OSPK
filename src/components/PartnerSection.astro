@@ -1,378 +1,195 @@
 ---
-// Data Sponsor & Mitra Acara Resmi OSIS & MPK SMKN 65 Jakarta
-interface SponsorItem {
+// Daftar Brand & Sponsor Resmi yang Pernah Berkolaborasi dengan SMKN 65 Jakarta
+interface PartnerItem {
   id: string;
   name: string;
-  tier: 'utama' | 'pendukung';
+  logo: string;
   category: string;
+  type: 'telco' | 'publishing' | 'grooming' | 'beauty' | 'care' | 'media' | 'vendor';
   badge: string;
-  event: string;
-  accentColor: string;
-  bgGlow: string;
   description: string;
 }
 
-const sponsorsUtama: SponsorItem[] = [
+const partners: PartnerItem[] = [
   {
     id: "byu",
     name: "by.U",
-    tier: "utama",
-    category: "Telekomunikasi & Provider Digital",
-    badge: "Official Telco Partner",
-    event: "AMANSIVE & Pentas Seni Siswa",
-    accentColor: "text-emerald-600 border-emerald-500/20 bg-emerald-500/5",
-    bgGlow: "from-emerald-500/10 to-teal-500/5",
-    description: "Dukungan kuota internet, booth aktivasi digital interaktif, dan konektivitas official selama gelaran akbar pentas seni dan agenda kesiswaan.",
+    logo: "/images/partners/byu.png",
+    category: "Provider Digital Telkomsel",
+    type: "telco",
+    badge: "Sponsor Resmi SMKN 65",
+    description: "Konektivitas internet, kuota digital, dan booth aktivasi kegiatan siswa.",
   },
   {
     id: "erlangga",
     name: "Penerbit Erlangga",
-    tier: "utama",
-    category: "Edukasi & Literasi Sekolah",
-    badge: "Official Educational Partner",
-    event: "Seminar Akademik & Literasi Sekolah",
-    accentColor: "text-blue-700 border-blue-500/20 bg-blue-500/5",
-    bgGlow: "from-blue-600/10 to-indigo-500/5",
-    description: "Sponsor buku panduan, materi edukatif kurikulum, narasumber literasi, serta apresiasi apresiasi siswa berprestasi SMKN 65.",
+    logo: "/images/partners/erlangga.svg",
+    category: "Penerbit & Edukasi",
+    type: "publishing",
+    badge: "Mitra Kolaborasi",
+    description: "Dukungan literasi sekolah, materi edukatif, dan apresiasi prestasi siswa.",
   },
-];
-
-const sponsorsPendukung: SponsorItem[] = [
   {
     id: "gatsby",
     name: "GATSBY",
-    tier: "pendukung",
-    category: "Men's Grooming",
-    badge: "Mandom Japan",
-    event: "AMANSIVE & Sports Cup",
-    accentColor: "text-slate-900 border-slate-300 bg-slate-50",
-    bgGlow: "from-slate-500/10 to-zinc-500/5",
-    description: "Paket styling rambut, merchandise eksklusif peserta, dan refreshment grooming peserta acara pentas seni.",
+    logo: "/images/partners/gatsby.svg",
+    category: "Men's Grooming (Mandom)",
+    type: "grooming",
+    badge: "Sponsor Resmi SMKN 65",
+    description: "Produk penata rambut, merchandise, dan refreshment penampilan siswa.",
   },
   {
     id: "pixy",
     name: "PIXY",
-    tier: "pendukung",
+    logo: "/images/partners/pixy.png",
     category: "Beauty & Cosmetics",
-    badge: "Tokyo - Paris",
-    event: "Pentas Seni & Class Meeting",
-    accentColor: "text-pink-600 border-pink-300 bg-pink-50",
-    bgGlow: "from-pink-500/10 to-rose-500/5",
-    description: "Beauty demo booth, goodie bag peserta, dan pendukung tata rias pengisi acara pentas seni kesiswaan.",
+    type: "beauty",
+    badge: "Mitra Kolaborasi",
+    description: "Goodie bag kecantikan, tata rias, dan aktivasi perawatan diri siswi.",
   },
   {
     id: "klinsen",
     name: "KLINSEN",
-    tier: "pendukung",
+    logo: "/images/partners/klinsen.svg",
     category: "Personal & Body Care",
-    badge: "Hygienic Care",
-    event: "LDKS & Kegiatan Kesiswaan",
-    accentColor: "text-cyan-700 border-cyan-300 bg-cyan-50",
-    bgGlow: "from-cyan-500/10 to-blue-500/5",
-    description: "Penyediaan produk kebersihan diri, antibacterial kit, dan dukungan higienitas peserta kegiatan luar ruang.",
+    type: "care",
+    badge: "Sponsor Resmi SMKN 65",
+    description: "Penyediaan produk kebersihan diri, sabun mandi, dan higienitas siswa.",
   },
   {
     id: "dayman",
     name: "DAYMAN",
-    tier: "pendukung",
-    category: "Men's Fragrance & Care",
-    badge: "For Men",
-    event: "Pentas Seni & Lomba Antar Kelas",
-    accentColor: "text-indigo-700 border-indigo-300 bg-indigo-50",
-    bgGlow: "from-indigo-500/10 to-blue-500/5",
-    description: "Sponsor wewangian pria aktif, produk giveaway, dan aktivasi booth interaktif pentas seni.",
+    logo: "/images/partners/dayman.svg",
+    category: "Men's Fragrance & Cologne",
+    type: "grooming",
+    badge: "Mitra Kolaborasi",
+    description: "Wewangian pria aktif dan paket produk giveaway kegiatan kesiswaan.",
   },
   {
     id: "teens",
     name: "Teens",
-    tier: "pendukung",
+    logo: "/images/partners/teens.svg",
     category: "Youth & Lifestyle Brand",
-    badge: "Youth Partner",
-    event: "Publikasi Acara & Festival",
-    accentColor: "text-amber-600 border-amber-300 bg-amber-50",
-    bgGlow: "from-amber-500/10 to-orange-500/5",
-    description: "Media partner publikasi event, liputan kesiswaan, serta merchandise gaya hidup remaja.",
+    type: "media",
+    badge: "Sponsor Resmi SMKN 65",
+    description: "Media publikasi, liputan kesiswaan, dan aktivasi gaya hidup remaja.",
   },
   {
     id: "megaputra",
     name: "MEGA PUTRA",
-    tier: "pendukung",
-    category: "Production & Apparel",
-    badge: "Official Vendor",
-    event: "Perlengkapan Acara & LDKO/LDKS",
-    accentColor: "text-slate-800 border-slate-300 bg-slate-50",
-    bgGlow: "from-slate-600/10 to-slate-400/5",
-    description: "Mitra percetakan atribut resmi, lanyard id card, spanduk panggung, dan seragam panitia kesiswaan.",
+    logo: "/images/partners/megaputra.svg",
+    category: "Produksi & Percetakan",
+    type: "vendor",
+    badge: "Mitra Resmi Sekolah",
+    description: "Pengadaan seragam panitia, spanduk, perlengkapan, dan atribut acara.",
   },
 ];
 ---
 
-<section id="mitra" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50/60 to-white border-b border-slate-200/90 relative overflow-hidden">
+<section id="mitra" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50/70 border-b border-slate-200 relative overflow-hidden">
   
-  <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+  <!-- Subtle Architectural Texture -->
+  <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none"></div>
 
   <div class="max-w-6xl mx-auto relative z-10">
     
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+    <!-- Section Header (Clean, Institutional, Factual) -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
       <div class="max-w-2xl">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase mb-3">
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          Rekam Jejak Kemitraan
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+          Kolaborasi & Kemitraan
         </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Sponsor & Rekan Kolaborasi
+          Sponsor & Rekan Brand
         </h2>
         <p class="text-sm sm:text-base text-slate-600 mt-2 font-normal leading-relaxed">
-          Brand nasional dan mitra industri terkemuka yang pernah bersinergi menyukseskan acara akbar kesiswaan SMKN 65 Jakarta (AMANSIVE, Pentas Seni, LDKS, dan Kejuaraan Siswa).
+          Brand nasional dan mitra industri yang pernah berkolaborasi serta mensponsori kegiatan siswa dan agenda resmi di SMKN 65 Jakarta.
         </p>
       </div>
 
-      <div class="flex items-center gap-3 bg-white p-3 sm:p-4 rounded-xl border border-slate-200 shadow-2xs">
-        <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center font-bold text-sm">
-          8+
-        </div>
-        <div>
-          <div class="text-xs font-bold text-slate-900">Kolaborasi Resmi</div>
-          <div class="text-[11px] text-slate-500">Acara Kesiswaan 2020 – 2024</div>
+      <!-- Trust Badge -->
+      <div class="flex-shrink-0">
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Pernah Bekerja Sama dengan SMKN 65</span>
         </div>
       </div>
     </div>
 
-    <!-- TIER 1: UTAMA / PRESENTING PARTNERS -->
-    <div class="mb-10">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Mitra Utama & Sponsor Resmi Acara</h3>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {sponsorsUtama.map((sponsor) => (
-          <div class="group relative bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 p-6 sm:p-8 transition-all hover:shadow-lg flex flex-col justify-between overflow-hidden">
-            
-            <div class={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${sponsor.bgGlow} rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none -mr-16 -mt-16`}></div>
-
-            <div class="relative z-10">
-              <div class="flex items-center justify-between gap-3 mb-6">
-                <span class={`px-3 py-1 rounded-full text-xs font-bold tracking-tight border ${sponsor.accentColor}`}>
-                  {sponsor.badge}
-                </span>
-                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
-                  {sponsor.event}
-                </span>
-              </div>
-
-              <!-- Vector Mark Display -->
-              <div class="h-16 flex items-center mb-5">
-                {sponsor.id === "byu" && (
-                  <div class="flex items-center gap-3">
-                    <svg class="h-11 w-auto" viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g fill="#011b4e">
-                        <path d="M12.5 7.5v28.8h5.2v-3.8c1.8 2.6 4.6 4.3 8.2 4.3 6.6 0 11.8-5.3 11.8-12.7s-5.2-12.7-11.8-12.7c-3.6 0-6.4 1.7-8.2 4.3V7.5h-5.2zm12.3 8.3c4 0 7.2 3.3 7.2 8.3s-3.2 8.3-7.2 8.3-7.2-3.3-7.2-8.3 3.2-8.3 7.2-8.3z"/>
-                        <path d="M40.2 16.5l8.5 19.8-3.4 7.9h5.6l11.4-27.7h-5.5l-6.8 17.5-6.8-17.5h-5z"/>
-                      </g>
-                      <circle cx="68.5" cy="32.5" r="4.2" fill="#00c7ba" />
-                      <path d="M78.5 16.5v11.6c0 6.4 4.5 10.3 11.2 10.3 6.8 0 11.3-3.9 11.3-10.3V16.5h-5.4v11.4c0 3.7-2.4 5.9-5.9 5.9-3.5 0-5.8-2.2-5.8-5.9V16.5h-5.4z" fill="#011b4e"/>
-                    </svg>
-                    <div class="border-l border-slate-200 pl-3">
-                      <div class="text-[10px] uppercase font-bold tracking-wider text-slate-600">Telkomsel</div>
-                      <div class="text-[11px] font-semibold text-emerald-600">Digital Telco</div>
-                    </div>
-                  </div>
-                )}
-
-                {sponsor.id === "erlangga" && (
-                  <div class="flex items-center gap-3.5">
-                    <svg class="h-12 w-auto" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="27" cy="27" r="26" fill="#0b3b82" stroke="#d97706" stroke-width="2"/>
-                      <path d="M12 36c5-6 10-8 15-5 5-3 10-1 15 5-4-10-9-13-15-13s-11 3-15 13z" fill="#ffffff"/>
-                      <circle cx="27" cy="20" r="4.5" fill="#f59e0b"/>
-                      <path d="M17 38h20v2.5H17z" fill="#f59e0b"/>
-                    </svg>
-                    <div>
-                      <div class="text-[10px] font-extrabold tracking-widest uppercase text-slate-600">PENERBIT</div>
-                      <div class="text-xl font-black tracking-tight text-blue-900 font-serif leading-none">
-                        ERLANGGA
-                      </div>
-                      <div class="text-[9px] font-semibold text-amber-600 tracking-wider uppercase mt-0.5">
-                        Melayani Ilmu Pengetahuan
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div class="text-xs font-semibold text-slate-700 mb-2">
-                {sponsor.category}
-              </div>
-
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                {sponsor.description}
-              </p>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600">
-              <span class="flex items-center gap-1.5 font-medium text-emerald-600">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                Kemitraan Terverifikasi
+    <!-- Responsive Dewa Grid: 2 kolom di HP, 4 kolom di Laptop/Desktop -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+      {partners.map((partner) => (
+        <div class="bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 p-4 sm:p-6 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group">
+          
+          <div>
+            <!-- Top Status Badge -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-[10px] sm:text-[11px] font-bold text-slate-600 bg-slate-100/90 px-2 sm:px-2.5 py-0.5 rounded-md">
+                {partner.badge}
               </span>
-              <span class="text-slate-600">OSIS & MPK SMKN 65</span>
+              <span class="text-[10px] text-emerald-600 font-semibold hidden sm:inline-block">
+                ✓ Mitra 65
+              </span>
             </div>
 
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <!-- TIER 2: CO-SPONSORS & BRAND PARTNERS -->
-    <div>
-      <div class="flex items-center justify-between gap-3 mb-4">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Brand Pendukung & Rekan Kegiatan</h3>
-        </div>
-        <span class="text-[11px] text-slate-600 hidden sm:inline-block">Geser kartu di mobile atau klik untuk detail</span>
-      </div>
-
-      <!-- Responsive Container: Touch horizontal momentum slider on mobile, crisp 3-column on desktop -->
-      <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 overflow-x-auto sm:overflow-x-visible pb-4 sm:pb-0 snap-x snap-mandatory scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
-        {sponsorsPendukung.map((sponsor) => (
-          <div class="flex-shrink-0 w-[260px] sm:w-auto snap-center bg-white rounded-xl border border-slate-200/90 hover:border-slate-300 p-5 transition-all hover:shadow-md flex flex-col justify-between group">
-            
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-600">
-                  {sponsor.badge}
-                </span>
-                <span class="text-[10px] font-semibold text-slate-600 truncate max-w-[130px]">
-                  {sponsor.event}
-                </span>
-              </div>
-
-              <!-- Brand Vector Icon Mark -->
-              <div class="h-14 flex items-center justify-start my-1">
-                
-                {sponsor.id === "gatsby" && (
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-black text-white flex items-center justify-center font-black text-lg tracking-tighter shadow-2xs group-hover:scale-105 transition-transform">
-                      G
-                    </div>
-                    <div>
-                      <div class="text-lg font-black tracking-wider text-slate-950 font-sans uppercase leading-none">
-                        GATSBY
-                      </div>
-                      <div class="text-[9px] font-bold tracking-widest text-slate-600 uppercase mt-0.5">
-                        MANDOM JAPAN
-                      </div>
-                    </div>
+            <!-- Authentic Official Brand Logo Display -->
+            <div class="h-16 sm:h-20 flex items-center justify-center p-2 rounded-xl bg-slate-50/50 group-hover:bg-slate-50 transition-colors mb-4">
+              {partner.id === "erlangga" ? (
+                <div class="flex items-center justify-center gap-2 w-full h-full">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    class="h-10 sm:h-12 w-auto object-contain flex-shrink-0"
+                    loading="lazy"
+                  />
+                  <div class="text-left">
+                    <span class="block text-[8px] sm:text-[9px] font-extrabold uppercase text-slate-400 tracking-wider">PENERBIT</span>
+                    <span class="block text-xs sm:text-sm font-black text-blue-900 tracking-tight font-serif leading-none">ERLANGGA</span>
                   </div>
-                )}
+                </div>
+              ) : (
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  class={`w-auto object-contain transition-transform group-hover:scale-105 ${
+                    partner.id === 'byu' ? 'h-9 sm:h-11' :
+                    partner.id === 'gatsby' ? 'h-7 sm:h-8' :
+                    partner.id === 'pixy' ? 'h-7 sm:h-9' :
+                    'h-8 sm:h-10 max-w-full'
+                  }`}
+                  loading="lazy"
+                />
+              )}
+            </div>
 
-                {sponsor.id === "pixy" && (
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-pink-600 text-white flex items-center justify-center font-serif font-black text-lg shadow-2xs group-hover:scale-105 transition-transform">
-                      P
-                    </div>
-                    <div>
-                      <div class="text-lg font-extrabold tracking-widest text-slate-900 font-sans uppercase leading-none">
-                        PIXY
-                      </div>
-                      <div class="text-[9px] font-semibold tracking-wider text-pink-600 uppercase mt-0.5">
-                        TOKYO • PARIS
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {sponsor.id === "klinsen" && (
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-cyan-700 text-white flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
-                      <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10 3h4v6h6v4h-6v8h-4v-8H4V9h6V3z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="text-base font-extrabold tracking-tight text-slate-900 uppercase leading-none">
-                        KLINSEN
-                      </div>
-                      <div class="text-[9px] font-semibold tracking-wider text-cyan-700 uppercase mt-0.5">
-                        SKIN CARE & HYGIENE
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {sponsor.id === "dayman" && (
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-indigo-900 text-white flex items-center justify-center font-black text-sm tracking-tighter shadow-2xs group-hover:scale-105 transition-transform">
-                      DM
-                    </div>
-                    <div>
-                      <div class="text-base font-black tracking-tight text-slate-900 uppercase leading-none italic">
-                        DAYMAN
-                      </div>
-                      <div class="text-[9px] font-bold tracking-widest text-indigo-700 uppercase mt-0.5">
-                        FOR MEN • COLOGNE
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {sponsor.id === "teens" && (
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center font-black text-base shadow-2xs group-hover:scale-105 transition-transform">
-                      T!
-                    </div>
-                    <div>
-                      <div class="text-lg font-black tracking-tight text-slate-900 leading-none italic">
-                        Teens.
-                      </div>
-                      <div class="text-[9px] font-bold tracking-wider text-amber-600 uppercase mt-0.5">
-                        YOUTH & LIFESTYLE
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {sponsor.id === "megaputra" && (
-                  <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-slate-800 text-white flex items-center justify-center font-black text-sm tracking-tight shadow-2xs group-hover:scale-105 transition-transform">
-                      MP
-                    </div>
-                    <div>
-                      <div class="text-base font-black tracking-tight text-slate-900 uppercase leading-none">
-                        MEGA PUTRA
-                      </div>
-                      <div class="text-[9px] font-bold tracking-wider text-slate-600 uppercase mt-0.5">
-                        PRODUKSI & APPAREL
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-              </div>
-
-              <div class="text-[11px] font-semibold text-slate-700 mt-2">
-                {sponsor.category}
-              </div>
-
-              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
-                {sponsor.description}
+            <!-- Brand Name & Category -->
+            <div class="mb-2">
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
+                {partner.name}
+              </h3>
+              <p class="text-[11px] sm:text-xs font-medium text-slate-500">
+                {partner.category}
               </p>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-600">
-              <span class="font-medium text-slate-600">Mitra Acara Siswa</span>
-              <span class="text-emerald-700 font-semibold">✓ Resmi</span>
-            </div>
-
+            <!-- Description (Peran Kolaborasi) -->
+            <p class="text-[10px] sm:text-[11px] text-slate-600 leading-relaxed font-normal">
+              {partner.description}
+            </p>
           </div>
-        ))}
-      </div>
+
+          <!-- Bottom Footer Card -->
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500">
+            <span>Kolaborasi Siswa</span>
+            <span class="font-semibold text-slate-700">SMKN 65</span>
+          </div>
+
+        </div>
+      ))}
     </div>
 
-    <!-- Partnership Callout -->
+    <!-- Official Partnership Callout (Clean & Institutional) -->
     <div class="mt-10 sm:mt-12 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-2xs">
       <div class="max-w-xl">
         <div class="flex items-center gap-2 mb-1.5">
@@ -380,19 +197,19 @@ const sponsorsPendukung: SponsorItem[] = [
           <span class="text-xs font-bold text-slate-900 uppercase tracking-wide">Peluang Kolaborasi & Sponsorship</span>
         </div>
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-          Organisasi Siswa Intra Sekolah (OSIS) dan Majelis Perwakilan Kelas (MPK) SMKN 65 Jakarta secara berkala membuka pintu kemitraan untuk agenda Pentas Seni (AMANSIVE), Bulan Bahasa, LDKS, dan Kejuaraan Kesiswaan.
+          Pengurus OSIS & MPK SMKN 65 Jakarta senantiasa terbuka untuk menjalin kemitraan, sponsorship, serta kolaborasi program kesiswaan bersama brand dan instansi.
         </p>
       </div>
       
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto flex-shrink-0">
         <a 
-          href="mailto:smkn65jkt@gmail.com?subject=Proposal%20Sponsorship%20Acara%20Kesiswaan%20SMKN%2065%20Jakarta" 
+          href="mailto:smkn65jkt@gmail.com?subject=Proposal%20Sponsorship%20Kemitraan%20SMKN%2065%20Jakarta" 
           class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-blue-700 hover:bg-blue-800 shadow-2xs transition-colors text-center"
         >
           Kirim Proposal Sponsor
         </a>
         <a 
-          href="https://wa.me/6281511927805?text=Halo%20Pengurus%20OSIS%20MPK%20SMKN%2065%20Jakarta,%20kami%20tertarik%20berkolaborasi%20sponsorship." 
+          href="https://wa.me/6281511927805?text=Halo%20Pengurus%20OSIS%20MPK%20SMKN%2065%20Jakarta,%20kami%20tertarik%20menjalin%20kerjasama%20sponsorship." 
           target="_blank"
           rel="noopener noreferrer"
           class="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-colors text-center"
