@@ -37,7 +37,7 @@ import { silsilahAngkatan } from '../data/sejarah';
         {silsilahAngkatan.map((item, index) => {
           const isLeft = index % 2 === 0;
           const hasImage = !!item.image;
-          const isCurrent = item.status === 'Masa Bakti Berjalan';
+          const isCurrent = item.status === 'Masa Bakti Aktif';
           const isFuture = item.status === 'Periode Mendatang';
 
           return (

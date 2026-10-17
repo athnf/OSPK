@@ -2,16 +2,17 @@ import hist2020 from '../assets/history/2020.jpeg';
 import hist2021 from '../assets/history/2021.jpeg';
 import hist2022 from '../assets/history/2022.jpeg';
 import hist2023 from '../assets/history/2023.jpeg';
+import hist2024 from '../assets/history/2024.jpeg';
 import type { ImageMetadata } from 'astro';
 
 export interface AngkatanItem {
   period: string; // e.g. "2020/2021"
-  generation: string; // e.g. "Angkatan I"
+  generation: string; // e.g. "Generasi 2020"
   theme: string;
   quote?: string;
   description: string;
   image?: ImageMetadata;
-  status: 'Arsip Terdokumentasi' | 'Masa Bakti Berjalan' | 'Periode Mendatang';
+  status: 'Arsip Terdokumentasi' | 'Masa Bakti Aktif' | 'Periode Mendatang';
 }
 
 export const silsilahAngkatan: AngkatanItem[] = [
@@ -54,16 +55,17 @@ export const silsilahAngkatan: AngkatanItem[] = [
   {
     period: "2024/2025",
     generation: "Generasi 2024",
-    theme: "Masa Bakti Aktif",
+    theme: "Menulis Sejarah Baru",
     quote: "Bersama-sama, kita tulis sejarah baru",
-    description: "Konsolidasi kepengurusan aktif dalam mengawal agenda tahunan dan aspirasi siswa.",
-    status: "Masa Bakti Berjalan",
+    description: "Konsolidasi kepengurusan aktif dalam mengawal agenda tahunan, transparansi kegiatan, dan aspirasi siswa SMKN 65.",
+    image: hist2024,
+    status: "Masa Bakti Aktif",
   },
   {
     period: "2025/2026",
     generation: "Generasi 2025",
     theme: "Kaderisasi & Regenerasi",
-    description: "Periode regenerasi estafet kepemimpinan pengurus OSIS dan MPK SMKN 65 Jakarta.",
+    description: "Periode estafet dan regenerasi kepemimpinan pengurus OSIS dan MPK SMKN 65 Jakarta.",
     status: "Periode Mendatang",
   },
   {
